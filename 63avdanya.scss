@@ -1,0 +1,60 @@
+// Змінні
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$alert-color: #ffc107;
+
+// Міксіни
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Стилі
+body {
+  background-color: $secondary-color;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.button {
+  display: inline-block;
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  @include border-radius(4px);
+  cursor: pointer;
+}
+
+.alert-message {
+  background-color: $alert-color;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  display: none;
+}
+
+.button:hover + .alert-message {
+  display: block;
+}

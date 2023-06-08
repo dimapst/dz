@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .merged-columns {
+      /* Задаємо ширину об'єднаних стовпців */
+      width: 200px;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ccc;
+      border: 1px solid #999;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .back-button:hover {
+      background-color: #999;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h2>Об'єднання стовпців</h2>
+  <table>
+    <tr>
+      <th>Заголовок 1</th>
+      <th class="merged-columns" colspan="2">Заголовок 2-3</th>
+      <th>Заголовок 4</th>
+    </tr>
+    <tr>
+      <td>Стовпець 1</td>
+      <td rowspan="2" class="merged-columns">Об'єднані стовпці 2-3, рядок 1</td>
+      <td>Стовпець 4</td>
+      <td>Стовпець 5</td>
+    </tr>
+    <tr>
+      <td>Стовпець 1</td>
+      <td>Стовпець 4</td>
+      <td>Стовпець 5</td>
+    </tr>
+  </table>
+
+  <h2>Об'єднання рядків</h2>
+  <table>
+    <tr>
+      <th>Заголовок 1</th>
+      <th>Заголовок 2</th>
+      <th>Заголовок 3</th>
+      <th>Заголовок 4</th>
+    </tr>
+    <tr>
+      <td rowspan="2" class="merged-rows">Об'єднаний рядок 1-2</td>
+      <td>Стовпець 1</td>
+      <td>Стовпець 2</td>
+      <td>Стовпець 3</td>
+    </tr>
+    <tr>
+      <td>Стовпець 1</td>
+      <td>Стовпець 2</td>
+      <td>Стовпець 3</td>
+    </tr>
+    <tr>
+      <td>Стовпець 1</td>
+      <td>Стовпець 2</td>
+      <td>Стовпець 3</td>
+      <td>Стовпець 4</td>
+    </tr>
+  </table>
+
+  <p><a href="golovna.html" class="back-button">Назад</a></p>
+</body>
+</html>

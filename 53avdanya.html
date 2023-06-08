@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Приклад сторінки з базовими селекторами</title>
+  <style>
+    /* Універсальний селектор */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Елементний селектор */
+    h1 {
+      color: blue;
+    }
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ccc;
+      border: 1px solid #999;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #333;
+    }
+
+    /* Класовий селектор */
+    .highlight {
+      background-color: yellow;
+    }
+
+    /* ID селектор */
+    #main-title {
+      font-size: 24px;
+    }
+
+    /* Груповий селектор */
+    h2, p {
+      color: green;
+    }
+
+    /* Дочірній селектор */
+    div > p {
+      font-style: italic;
+    }
+
+    /* Сусідній селектор */
+    h2 + p {
+      text-decoration: underline;
+    }
+
+    /* Псевдоелемент ::before */
+    h3::before {
+      content: ">>";
+    }
+
+    /* Псевдоклас :hover */
+    a:hover {
+      color: red;
+    }
+
+    /* Селектор :nth-child() */
+    ul li:nth-child(odd) {
+      background-color: lightgray;
+    }
+
+    /* Використання функції calc() */
+    div {
+      width: calc(50% - 20px);
+      margin: 10px;
+      display: inline-block;
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">Привіт, це заголовок</h1>
+  <div class="highlight">
+    <h2>Це другорядний заголовок</h2>
+    <p>Це параграф</p>
+  </div>
+  <p>Це ще один параграф</p>
+  <h3>Це заголовок з псевдоелементом</h3>
+  <a href="#">Це посилання</a>
+  <ul>
+    <li>Елемент 1</li>
+    <li>Елемент 2</li>
+    <li>Елемент 3</li>
+    <li>Елемент 4</li>
+    <li>Елемент 5</li>
+  </ul>
+  <p><a href="golovna.html" class="back-button">Назад</a></p>
+</body>
+</html>
